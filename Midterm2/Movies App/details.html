@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="movie-details-container">
+    <div id="movieDetails">
+      <p id="synopsis">Synopsis will be displayed here.</p>
+      <div class="rating-runtime">
+        <p>Rating: <span id="rating">N/A</span></p>
+        <p>Runtime: <span id="runtime">N/A</span> minutes</p>
+      </div>
+      <div class="cast-list">
+        <h3>Cast:</h3>
+        <ul id="castList">
+        </ul>
+      </div>
+      <div class="movie-trailer" id="movieTrailer">
+      </div>
+      <button class="add-to-watchlist-btn" onclick="addToWatchlist(null, movie.id)">Add to Watchlist</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

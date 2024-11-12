@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button onclick="fetchWeather()">Get Weather</button>
+        <button onclick="getLocationWeather()">Use Current Location</button>
+        
+        <div class="recommended-cities">
+            <h3>Recommended Cities</h3>
+            <button onclick="fetchWeatherForCity('New York')">New York</button>
+            <button onclick="fetchWeatherForCity('Tokyo')">Tokyo</button>
+            <button onclick="fetchWeatherForCity('London')">London</button>
+            <button onclick="fetchWeatherForCity('Paris')">Paris</button>
+        </div>
+        
+        <div id="currentWeather" class="weather-info"></div>
+        
+        <div id="forecast" class="forecast-info">
+            <h3>5-Day Forecast</h3>
+            <div class="forecast-cards"></div>
+        </div>
+        
+        <div id="unitToggle">
+            <label for="tempUnit">Temperature Unit:</label>
+            <select id="tempUnit" onchange="toggleUnits()">
+                <option value="C">°C</option>
+                <option value="F">°F</option>
+            </select>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

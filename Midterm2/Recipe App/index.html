@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Recipe Finder</h1>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for recipes...">
+            <button id="view-favorites-btn" class="btn">Favorites</button>
+            <button id="back-to-main-btn" class="btn">Go back</button>
+            <div id="suggestions"></div>
+        </div>
+    </header>
+    <main>
+        <div id="loading">Loading recipes...</div>
+        <section id="recipe-grid"></section>
+        <section id="favorites-section" style="display: none">
+            <h2>Your Favorites</h2>
+            <div id="favorites-grid"></div>
+        </section>
+    </main>
+    <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="recipe-title"></h2>
+            <img id="recipe-image" alt="Recipe Image">
+            <div id="recipe-details">
+                <p id="recipe-ingredients"></p>
+                <p id="recipe-instructions"></p>
+            </div>
+            <button id="favorite-btn">Add to favorites</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
